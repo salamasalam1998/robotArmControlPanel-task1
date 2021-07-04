@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Robot Arm control panel</title>
+
+    
+    
+</head>
+<link rel="stylesheet" href="./style.css">
+<body>
+
+    <meta http-equiv="Refresh" content="60">
+    <form action="insert.php" method="post">
+
+    <header id="mainHeader">
+        <div class="container">
+            <h1> Robot Arm Control Panel </h1>
+        </div>
+    </header>
+   <div class="contain">
+   <p> This is a Control panel for the arm of the robot where you can move
+     each engine up to 180 degrees.</p>
+</div>
+<div class="form-group">
+  <label for="fa fa-sliders"> Engine 1:</label>
+  <input type="range" id="slider1" min="0" max="180" value="0" name="engine1">
+  <p>Value: <span id="e1"></span></p>
+</div>
+
+<div class="form-group">
+    <label for="fa fa-sliders"> Engine 2:</label>
+    <input type="range" id="slider2" min="0" max="180" value="0" name="engine2">
+    <p>Value: <span id="e2"></span></p>
+  </div>
+  <div class="form-group">
+    <label for="fa fa-sliders"> Engine 3:</label>
+    <input type="range" id="slider3" min="0" max="180" value="0" name="engine3">
+    <p>Value: <span id="e3"></span></p>
+  </div>
+  <div class="form-group">
+    <label for="fa fa-sliders"> Engine 4:</label>
+    <input type="range" id="slider4" min="0" max="180" value="0" name="engine4">
+    <p>Value: <span id="e4"></span></p>
+  </div>
+  <div class="form-group">
+    <label for="fa fa-sliders"> Engine 5:</label>
+    <input type="range" id="slider5" min="0" max="180" value="0" name="engine5">
+    <p>Value: <span id="e5"></span></p>
+  </div>
+  <div class="form-group">
+    <label for="fa fa-sliders"> Engine 6:</label>
+    <input type="range" id="slider6" min="0" max="180" value="0" name="engine6">
+    <p>Value: <span id="e6"></span></p>
+  </div>
+
+  <br>
+  
+<br>
+<div class="status">
+<input type="radio" name="statuss" id="on" value="ON" />
+<label for="html">ON</label><br>    
+<input type="radio" name="statuss" id="OFF" value="OFF" />
+<label for="html">OFF</label><br>
+</div>
+    <br>
+
+<input type="submit" name="save" onClick="reloadpage()"value="Save" > </input>
+<br>
+<div class="img">
+<img src="https://pbs.twimg.com/profile_images/1317908363921981444/6Jd5bmN9_400x400.jpg" alt="SmartMethods" style="width:150px;height:150px;">
+</div>
+    <br>
+
+
+
+
+<script>
+
+function atLeastOneRadio() {
+    return ($('input[type=radio]:checked').size() > 0);
+}
+
+</script>
+    <script>
+
+    var slider1 = document.getElementById("slider1");
+    var output1 = document.getElementById("e1");
+    output1.innerHTML = slider1.value;
+    
+    slider1.oninput = function() {
+      output1.innerHTML = this.value;
+    }
+   
+    
+
+    var slider2 = document.getElementById("slider2");
+    var output2 = document.getElementById("e2");
+    output2.innerHTML = slider2.value;
+    
+    slider2.oninput = function() {
+      output2.innerHTML = this.value;
+    }
+   
+
+    var slider3 = document.getElementById("slider3");
+    var output3 = document.getElementById("e3");
+    output3.innerHTML = slider3.value;
+    
+    slider3.oninput = function() {
+      output3.innerHTML = this.value;
+    }
+
+    var slider4 = document.getElementById("slider4");
+    var output4 = document.getElementById("e4");
+    output4.innerHTML = slider4.value;
+    
+    slider4.oninput = function() {
+      output4.innerHTML = this.value;
+    }
+
+    var slider5 = document.getElementById("slider5");
+    var output5 = document.getElementById("e5");
+    output5.innerHTML = slider5.value;
+    
+    slider5.oninput = function() {
+      output5.innerHTML = this.value;
+    }
+
+    var slider6 = document.getElementById("slider6");
+    var output6 = document.getElementById("e6");
+    output6.innerHTML = slider6.value;
+    
+    slider6.oninput = function() {
+      output6.innerHTML = this.value;
+    }
+    </script>
+    
+    </form>
+    
+</body>
+</html>
